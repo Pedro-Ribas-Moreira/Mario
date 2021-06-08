@@ -1,0 +1,273 @@
+
+/* referece 
+The following 4 (12-15) lines of code has been sourced by:
+https://www.w3schools.com/css/css3_fonts.asp */
+
+
+html, body{
+
+    font-family: 'Press Start 2P', cursive;
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    margin: 0; 
+    padding: 0;
+    }
+    
+
+.mainDiv{
+ 
+    display: flex;
+    height: 50%;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+/* reference: singles lines css styles: https://www.youtube.com/watch?v=qm0IfG1GyZU&t=177s */
+#logo{
+    display: grid;
+    place-content: center;
+    border: solid black 6px;
+    background-color: #E75A10;
+    height: 200px;
+    width: 800px;
+    min-width: 300px;
+    font-family: 'Adumu';
+    text-transform: uppercase;
+    color: white;
+    font-size: 90px;
+    letter-spacing: 3px;
+    z-index: 11;
+}
+
+
+
+
+  
+.mario{
+    position: absolute;
+    height: 150px;
+    display: none;
+    z-index: -1;
+}
+
+.showMario{
+    display: block;
+}
+
+/* .showMario{
+    display: block;
+} */
+
+
+
+
+/* reference https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
+
+
+    .sky, .ground{
+    background-color: #548CFF;
+   
+    position: relative; /*Because we want to position items on and in them!*/
+    }
+    
+    .sky{
+    top:0;
+    height: 90%;
+    background-color: none;    
+    }
+    .ground{ 
+    height: 10%;
+    background-color: #C84C0C; 
+    background-image: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/groundblock.png');
+        
+    }
+    .scorebar{    
+    position: absolute;
+    top: 150px;
+    height: 120px;
+    width:100%;    
+    
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        color: white;
+    
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 0.2;
+    }
+    .cloud{
+    position: absolute;
+    height: 100px;
+    z-index: 10;
+    
+    }
+    .cloud-0{
+        top: 20%; 
+        -webkit-animation: wind 55s both infinite linear reverse; 
+                animation: wind 55s both infinite linear reverse
+    }
+    .cloud-1{
+        top: 45%;
+        -webkit-animation: wind 35s both infinite linear reverse;
+                animation: wind 35s both infinite linear reverse;
+    }
+    .cloud-2{
+        top: 57%;
+        -webkit-animation: wind 20s both infinite linear reverse;
+                animation: wind 20s both infinite linear reverse;
+    }
+    .cloud-3{
+        top: 70%;
+        left: 40px;
+        -webkit-animation: wind 15s both infinite linear reverse;
+                animation: wind 15s both infinite linear reverse;
+    }
+    
+    .skyblocks{
+    position: absolute;   
+    top: -250px;
+    }
+    .brick{     
+        position: fixed;      
+        margin: -2px;
+        z-index: 11;
+    }
+
+        .brick-1{
+            left:600px;
+        }
+        .brick-2{
+            left:670px;
+            cursor: pointer;
+        }
+        .brick-3{
+           
+            left:740px;
+        }        
+        .brick-4{
+            left:810px;
+  
+        } 
+    
+    .skyblocks > div{
+        position: relative;
+    }
+        
+    .hidden-coin{
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    
+    .jump{
+     animation: jump 0.5s linear;    
+    }
+    
+    .bush{
+    position: absolute;
+    top:-70px;
+    }
+    
+    .bush:nth-child(1){
+        left: 150px;   
+    }
+    .bush:nth-child(2){
+        left: 900px;;   
+    }
+    .bush:nth-child(3){
+        left: 1500px;;   
+    }
+    
+    .mario-1{
+    position: absolute;
+    width: 71px;
+    height: 72px;
+    background: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/mariowalking/result.png') left center;    
+    top:-70px;
+    left:0px;
+    
+    -webkit-animation: play 0.8s steps(4) infinite,
+                run 7s both infinite linear;
+    
+            animation: play 0.8s steps(4) infinite,
+                run 7s both infinite linear;
+    }
+    @-webkit-keyframes play{
+    100%{background-position: -284px;}
+    }
+    @keyframes play{
+    100%{background-position: -284px;}
+    }
+    @-webkit-keyframes run{
+    from{left: -200px;}
+    to{left: 100%;}
+    }
+    @keyframes run{
+    from{left: -200px;}
+    to{left: 100%;}
+    }
+    @-webkit-keyframes wind{
+    from{left: -300px;}
+    to{left: 100%;}
+    }
+    @keyframes wind{
+    from{left: -300px;}
+    to{left: 100%;}
+    }
+    @keyframes jump{
+        0%{top: 0%}
+        50%{top: -100%;}
+        100%{top: 0%}
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px){
+
+    #logo{
+        display: grid;
+        place-content: center;
+        background-color:#D94F21;
+        border: solid black 6px;
+        height: 150px;
+        width: 500px;
+        font-family: 'Adumu';
+        text-transform: uppercase;
+        color: white;
+        font-size: 60px;
+        letter-spacing: 3px;
+    }
+    .showDiv{
+        display: block;
+    }
+
+        
+    .infoDiv p{
+        font-size: 35px;
+    
+    }
+    #btnMario{
+       
+        width: 300px;
+        font-size: 25px;
+        margin-top: 10px;
+      }
+}
+
+
+/* form */
+
